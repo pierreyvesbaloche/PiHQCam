@@ -1,7 +1,7 @@
 # PiHQCam
 *" A full self-contained Raspberry Pi Camera Project. "*
 
-![PiHQCami First Full-size Picture](/images/BearPi.jpeg)
+![PiHQCam First Full-size Picture](./images/BearPi.jpeg)
 
 This picture of Babbage Bear posing in front of some Raspberries was the very first one taken from this incredible project.
 
