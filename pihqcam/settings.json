@@ -1,0 +1,39 @@
+[
+    {
+        "type": "string",
+        "title": "Pictures",
+        "desc": "Where the pictures will be stored",
+        "section": "HQCam",
+        "key": "picture_folder"
+    },
+    {
+        "type": "string",
+        "title": "Thumbnails",
+        "desc": "Where the thumbnails will be stored",
+        "section": "HQCam",
+        "key": "thumb_folder"
+    },
+    {
+        "type": "numeric",
+        "title": "Timer",
+        "desc": "How long before taking the picture in timer mode",
+        "section": "HQCam",
+        "key": "timers_duration"
+    },
+    {
+        "type": "options",
+        "title": "Still Resolution",
+        "desc": "How big the picture should be from the following",
+        "section": "HQCam",
+        "key": "picture_res",
+        "options": ["640x480", "1920x1024", "3280x2464", "4056x3040"]
+    },
+    {
+        "type": "options",
+        "title": "Video Resolution",
+        "desc": "How big the video should be from the following",
+        "section": "HQCam",
+        "key": "video_res",
+        "options": ["640x480p40", "640x480p60", "640×480p90", "720p60", "1080p30"]
+    }
+]

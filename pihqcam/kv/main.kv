@@ -1,0 +1,380 @@
+#:kivy 1.11.0
+#:import LabelClock pihqcam.uix.tools.labelclock
+#:import HandledPiCamPanels pihqcam.uix.panels.campanels
+#:import PiCameraEffectGridLayout pihqcam.uix.layout.cameraeffect
+#:import MemoryImage pihqcam.uix.image.memoryimage
+#:import PiCameraFileBrowser pihqcam.uix.layout.camerabrowser
+
+<MainScreen>:
+    GridLayout:
+        cols:1
+        rows:2
+        orientation: 'vertical'
+        GridLayout:
+            size_hint: 1.0, 0.05
+            cols:3
+            rows:1
+            LabelClock:
+                id: info_time
+                halign: 'left'
+        HandledPiCamPanels:
+            size_hint: 1.0, 0.95
+            id: panels
+            do_default_tab: False
+            tab_pos: 'top_left'
+            tab_height: 90
+            tab_width: 240
+            myroot: root
+            TabbedPanelItem:
+                id: panel_cam
+                text: "Camera"
+                Accordion:
+                    id: main_accordion
+                    AccordionItem:
+                        title: "Effects"
+                        PiCameraEffectGridLayout:
+                            cols: 3
+                            id: cameraeffect
+                            ToggleButton:
+                                text: 'None'
+                                group: 'cameffect'
+                                state: 'down'
+                                text_size: self.size
+                                halign: 'center'
+                                valign: 'bottom'
+                                padding_y: 10
+                                on_press: cameraeffect.update_camera_effect(self.text)
+                                allow_no_selection: False
+                                Image:
+                                    source: 'pihqcam/resources/kivy.png'
+                                    center_x: self.parent.center_x
+                                    center_y: self.parent.center_y + 10
+                                    size: 64, 64
+                                    allow_stretch: True
+                            ToggleButton:
+                                text: 'Black & White'
+                                group: 'cameffect'
+                                text_size: self.size
+                                halign: 'center'
+                                valign: 'bottom'
+                                padding_y: 10
+                                on_press: cameraeffect.update_camera_effect(self.text)
+                                allow_no_selection: False
+                                Image:
+                                    source: 'pihqcam/resources/kivy.png'
+                                    center_x: self.parent.center_x
+                                    center_y: self.parent.center_y + 10
+                                    size: 64, 64
+                                    allow_stretch: True
+                            ToggleButton:
+                                text: 'Sepia'
+                                group: 'cameffect'
+                                text_size: self.size
+                                halign: 'center'
+                                valign: 'bottom'
+                                padding_y: 10
+                                on_press: cameraeffect.update_camera_effect(self.text)
+                                allow_no_selection: False
+                                Image:
+                                    source: 'pihqcam/resources/kivy.png'
+                                    center_x: self.parent.center_x
+                                    center_y: self.parent.center_y + 10
+                                    size: 64, 64
+                                    allow_stretch: True
+                            ToggleButton:
+                                text: 'Cartoon'
+                                group: 'cameffect'
+                                text_size: self.size
+                                halign: 'center'
+                                valign: 'bottom'
+                                padding_y: 10
+                                on_press: cameraeffect.update_camera_effect(self.text)
+                                allow_no_selection: False
+                                Image:
+                                    source: 'pihqcam/resources/kivy.png'
+                                    center_x: self.parent.center_x
+                                    center_y: self.parent.center_y + 10
+                                    size: 64, 64
+                                    allow_stretch: True
+                            ToggleButton:
+                                text: 'ColorBalance'
+                                group: 'cameffect'
+                                text_size: self.size
+                                halign: 'center'
+                                valign: 'bottom'
+                                padding_y: 10
+                                on_press: cameraeffect.update_camera_effect(self.text)
+                                allow_no_selection: False
+                                Image:
+                                    source: 'pihqcam/resources/kivy.png'
+                                    center_x: self.parent.center_x
+                                    center_y: self.parent.center_y + 10
+                                    size: 64, 64
+                                    allow_stretch: True
+                            ToggleButton:
+                                text: 'ColorSwap'
+                                group: 'cameffect'
+                                text_size: self.size
+                                halign: 'center'
+                                valign: 'bottom'
+                                padding_y: 10
+                                on_press: cameraeffect.update_camera_effect(self.text)
+                                allow_no_selection: False
+                                Image:
+                                    source: 'pihqcam/resources/kivy.png'
+                                    center_x: self.parent.center_x
+                                    center_y: self.parent.center_y + 10
+                                    size: 64, 64
+                                    allow_stretch: True
+                            ToggleButton:
+                                text: 'DeNoise'
+                                group: 'cameffect'
+                                text_size: self.size
+                                halign: 'center'
+                                valign: 'bottom'
+                                padding_y: 10
+                                on_press: cameraeffect.update_camera_effect(self.text)
+                                allow_no_selection: False
+                                Image:
+                                    source: 'pihqcam/resources/kivy.png'
+                                    center_x: self.parent.center_x
+                                    center_y: self.parent.center_y + 10
+                                    size: 64, 64
+                                    allow_stretch: True
+                            ToggleButton:
+                                text: 'Emboss'
+                                group: 'cameffect'
+                                text_size: self.size
+                                halign: 'center'
+                                valign: 'bottom'
+                                padding_y: 10
+                                on_press: cameraeffect.update_camera_effect(self.text)
+                                allow_no_selection: False
+                                Image:
+                                    source: 'pihqcam/resources/kivy.png'
+                                    center_x: self.parent.center_x
+                                    center_y: self.parent.center_y + 10
+                                    size: 64, 64
+                                    allow_stretch: True
+                            ToggleButton:
+                                text: 'Film'
+                                group: 'cameffect'
+                                text_size: self.size
+                                halign: 'center'
+                                valign: 'bottom'
+                                padding_y: 10
+                                on_press: cameraeffect.update_camera_effect(self.text)
+                                allow_no_selection: False
+                                Image:
+                                    source: 'pihqcam/resources/kivy.png'
+                                    center_x: self.parent.center_x
+                                    center_y: self.parent.center_y + 10
+                                    size: 64, 64
+                                    allow_stretch: True
+                            ToggleButton:
+                                text: 'GPen'
+                                group: 'cameffect'
+                                text_size: self.size
+                                halign: 'center'
+                                valign: 'bottom'
+                                padding_y: 10
+                                on_press: cameraeffect.update_camera_effect(self.text)
+                                allow_no_selection: False
+                                Image:
+                                    source: 'pihqcam/resources/kivy.png'
+                                    center_x: self.parent.center_x
+                                    center_y: self.parent.center_y + 10
+                                    size: 64, 64
+                                    allow_stretch: True
+                            ToggleButton:
+                                text: 'Hatch'
+                                group: 'cameffect'
+                                text_size: self.size
+                                halign: 'center'
+                                valign: 'bottom'
+                                padding_y: 10
+                                on_press: cameraeffect.update_camera_effect(self.text)
+                                allow_no_selection: False
+                                Image:
+                                    source: 'pihqcam/resources/kivy.png'
+                                    center_x: self.parent.center_x
+                                    center_y: self.parent.center_y + 10
+                                    size: 64, 64
+                                    allow_stretch: True
+                            ToggleButton:
+                                text: 'Pastel'
+                                group: 'cameffect'
+                                text_size: self.size
+                                halign: 'center'
+                                valign: 'bottom'
+                                padding_y: 10
+                                on_press: cameraeffect.update_camera_effect(self.text)
+                                allow_no_selection: False
+                                Image:
+                                    source: 'pihqcam/resources/kivy.png'
+                                    center_x: self.parent.center_x
+                                    center_y: self.parent.center_y + 10
+                                    size: 64, 64
+                                    allow_stretch: True
+                            ToggleButton:
+                                text: 'Posterise'
+                                group: 'cameffect'
+                                text_size: self.size
+                                halign: 'center'
+                                valign: 'bottom'
+                                padding_y: 10
+                                on_press: cameraeffect.update_camera_effect(self.text)
+                                allow_no_selection: False
+                                Image:
+                                    source: 'pihqcam/resources/kivy.png'
+                                    center_x: self.parent.center_x
+                                    center_y: self.parent.center_y + 10
+                                    size: 64, 64
+                                    allow_stretch: True
+                            ToggleButton:
+                                text: 'Sketch'
+                                group: 'cameffect'
+                                text_size: self.size
+                                halign: 'center'
+                                valign: 'bottom'
+                                padding_y: 10
+                                on_press: cameraeffect.update_camera_effect(self.text)
+                                allow_no_selection: False
+                                Image:
+                                    source: 'pihqcam/resources/kivy.png'
+                                    center_x: self.parent.center_x
+                                    center_y: self.parent.center_y + 10
+                                    size: 64, 64
+                                    allow_stretch: True
+                            ToggleButton:
+                                text: 'WashedOut'
+                                group: 'cameffect'
+                                text_size: self.size
+                                halign: 'center'
+                                valign: 'bottom'
+                                padding_y: 10
+                                on_press: cameraeffect.update_camera_effect(self.text)
+                                allow_no_selection: False
+                                Image:
+                                    source: 'pihqcam/resources/kivy.png'
+                                    center_x: self.parent.center_x
+                                    center_y: self.parent.center_y + 10
+                                    size: 64, 64
+                                    allow_stretch: True
+
+                    AccordionItem:
+                        title: "Viewer"
+                        HandledPiCameraView:
+                            id: cameraview
+                            orientation: 'vertical'
+                            myroot:root
+                            cameraeffect: cameraeffect
+                            cameraimage: cameraimage
+                            camerashutter: panels
+                            BoxLayout:
+                                orientation: 'vertical'
+                                MemoryImage:
+                                    id: cameraimage
+                                    size: (640, 480)
+                                    size_hint: 1.0, 0.9
+                                BoxLayout:
+                                    orientation: 'horizontal'
+                                    size_hint: 1.0, 0.1
+                                    ToggleButton:
+                                        text: 'Camera'
+                                        group: 'cammode'
+                                        state: 'down'
+					                    allow_no_selection: False
+                                        on_press: cameraview.set_mode_camera_still()
+                                    ToggleButton:
+                                        text: 'Timer'
+                                        group: 'cammode'
+					                    allow_no_selection: False
+                                        on_press: cameraview.set_mode_camera_timer()
+                                    ToggleButton:
+                                        text: 'Video'
+                                        group: 'cammode'
+					                    allow_no_selection: False
+                                        on_press: cameraview.set_mode_camera_video()
+
+            TabbedPanelItem:
+                id: panel_files
+                text: "Browser"
+                myroot: root
+                PiCameraFileBrowser:
+                    id: filebrowserwidget
+                    filepreviewer: filepreviewer
+                    videopreviewer: videopreviewer
+                    filechooser: filechooser
+                    filename: filename
+                    filedate: filedate
+                    filerez: filerez
+                    BoxLayout:
+                        id: panel_files_browser_layout
+                        orientation:'horizontal'
+                        FileChooserListView:
+                            id: filechooser
+                            path:filebrowserwidget.customrootpath
+                            size_hint:(0.47, 1.0)
+                            on_selection: filebrowserwidget.selected(filechooser.selection)
+                        GridLayout:
+                            size_hint:(0.53, 1.0)
+                            cols:1
+                            rows:2
+                            GridLayout:
+                                cols:1
+                                rows:2
+                                Video:
+                                    id: videopreviewer
+                                    allow_fullscreen: False
+                                    volume: 0
+                                    options: {'eos': 'loop'}
+                                    source: ""
+                                    state: "stop"
+                                    height: 0
+                                    size_hint_y: None
+                                    opacity: 0
+                                    disabled: True
+                                AsyncImage:
+                                    id: filepreviewer
+                                    source: ""
+                                    nocache: True
+                            Accordion:
+                                orientation: 'vertical'
+                                AccordionItem:
+                                    title: "Infos"
+                                    collapse: False
+                                    BoxLayout:
+                                        orientation: 'vertical'
+                                        Label:
+                                            id: filename
+                                            text: 'Name'
+                                        Label:
+                                            id: filedate
+                                            text: 'Date'
+                                        Label:
+                                            id: filerez
+                                            text: 'Resolution'
+                                AccordionItem:
+                                    title: "Actions"
+                                    GridLayout:
+                                        cols:1
+                                        rows:2
+                                        Button:
+                                            text: 'Delete'
+                                            on_press: filebrowserwidget.do_delete_image()
+            TabbedPanelItem:
+                id: panel_info
+                text: "Infos"
+                GridLayout:
+                    cols:1
+                    rows:3
+                    Button:
+                        text: 'Settings'
+                        on_press: app.open_settings()
+                    Button:
+                        text: 'Quit'
+                        on_press: app.do_quit()
+                    Button:
+                        text: 'SwitchOff'
+                        on_press: app.do_switchoff()
