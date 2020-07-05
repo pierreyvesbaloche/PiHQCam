@@ -1,0 +1,16 @@
+[Unit]
+Description=PiCamera auto-startup service
+After=network.target
+
+[Service]
+User=pi
+Environment=PYTHONPATH=/home/pi/PiHQCam
+ExecStart=/usr/bin/python3 -u /home/pi/PiHQCam/pihqcam/main.py
+WorkingDirectory=/home/pi/PiHQCam/
+StandardOutput=inherit
+StandardError=inherit
+Restart=always
+User=pi
+
+[Install]
+WantedBy=multi-user.target
