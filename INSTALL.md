@@ -201,4 +201,4 @@ You can define the following parameters:
 
 ![PiHQCam Interface](./images/PiHQCam-Settings.png)
 
-__Important__ : Again the Kivy interface can be a bit tricky when selecting / entering values, it might be necessary to insit when selecting/confirming choices. "*Sliding slighly* can be helping sometimes as you press the screen's choice. For manual entries (paths, duration...) a touchscreen keyboard will popup.
+__Important__ : Again the Kivy interface can be a bit tricky when selecting / entering values, it might be necessary to insit when selecting/confirming choices. *Sliding slighly* can be helping sometimes as you press the screen's choice. For manual entries (paths, duration...) a touchscreen keyboard will popup.

@@ -6,8 +6,8 @@
 This picture of Babbage Bear posing in front of some Raspberries was the very first one taken from this incredible project.
 
 Make sure to follow this project as its content will soon get updated with all necessary items :
-  - 3D Model files
-  - Project's code & configuration procedure
+  - 3D Model files ( https://www.thingiverse.com/thing:4425806 )
+  - Project's code & short configuration procedure ( https://github.com/pierreyvesbaloche/PiHQCam/blob/master/INSTALL.md )
 
 If you feel that there would be some improvements that you'd like to see, make sure to raise an issue and we'll get them sorted.
 
