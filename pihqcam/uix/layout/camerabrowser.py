@@ -57,7 +57,7 @@ class PiCameraFileBrowser(BoxLayout):
             except:
                 exc_type, exc_obj, exc_tb = sys.exc_info()
                 fname = os.path.split(exc_tb.tb_frame.f_code.co_filename)[1]
-                Logger.error("PiCameraFileBrowser: selected: {} / {} / {}".format(exc_type, fname, exc_tb.tb_lineno))
+                Logger.error("PiCameraFileBrowser: selected: {} / {} / {} / {}".format(exc_type, exc_obj, fname, exc_tb.tb_lineno))
 
 
     def do_delete_image(self, *args):
