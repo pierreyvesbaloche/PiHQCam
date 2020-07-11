@@ -171,16 +171,16 @@ __Important__ : As the switch between tabs under Kivy is not working with the Hy
  Three buttons at its bottom allows you to choose between the modes available:
   - __Camera__ : Take a single shot right-away, when pressing once the trackball's button.
   - __Timer__ : Trigger a timer before taking the shot whose duration is configurable.
-  - __Video__ : Film with the camera when starting and stoppping the sequence by pressing once the trackball.
+  - __Video__ : Film with the camera when starting and stopping the sequence by pressing once the trackball.
 
 The side of the screen also integrates pannels that you can press on on the screen to reveal the set of available effects with the camera.
-Some of them are compatible with the direct view shereas others are not, so don't be surprised.
+Some of them are compatible with the direct view whereas others are not, so don't be surprised.
 
  ### Browser Tab
 
 ![PiHQCam Interface](./images/PiHQCam-Browser.png)
 
-The ___Browser___ tab points to the location configured (DCIM by default) where all the medias (pictures and videos) are stored. You can scroll betxeen them with the up & down rolls of the trackball which will update the preview of the media on the right hand side.
+The ___Browser___ tab points to the location configured (DCIM by default) where all the medias (pictures and videos) are stored. You can scroll between them with the up & down rolls of the trackball which will update the preview of the media on the right hand side.
 
 Under the preview, some basic information are available like the name, date & time & resolution in the *Info* panel. 
 
@@ -190,7 +190,7 @@ You can also perform some actions when revealing the action panel. Currently, on
 
 ![PiHQCam Interface](./images/PiHQCam-Info.png)
 
-The ___Info___ tab allows you to reach the Settings of the application, as well as either quitting the application or even shuting down completly the camera, so that you'll be able to unplug the camera.
+The ___Info___ tab allows you to reach the Settings of the application, as well as either quitting the application or even shutting down completly the camera, so that you'll be able to unplug the camera.
 
 You can define the following parameters:
  - __Picture__ : where the medias are to be stored
