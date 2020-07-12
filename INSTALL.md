@@ -52,7 +52,7 @@ sudo apt-get -y full-upgrade
 sudo apt-get install -y vim git screen
  ```
  - Configure the system's elements with the following command:
-   - Hostname : ```picamera.local```
+   - Hostname : ```picamera```
    - Pi user password : ```To_your_liking_:D```
    - Interface :
      - PiCamera : ```Activate```
